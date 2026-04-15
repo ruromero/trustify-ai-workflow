@@ -1,0 +1,6 @@
+.env
+.DS_Store
+
+# Claude Code — user-specific settings (permissions, local paths)
+.claude/settings.local.json
+.claude/plugins.json
