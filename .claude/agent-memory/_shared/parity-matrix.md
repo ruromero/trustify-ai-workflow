@@ -1,6 +1,6 @@
 # Feature Parity Matrix -- Dependency Analytics Clients
 
-Last updated: 2026-04-23 (PR#428 refactored to `uv export`; PR#421 Go MVS fix merged; PR#423 npm null-version fix merged; TC-3818 partially resolved — 2 of 4 sub-issues fixed)
+Last updated: 2026-05-20 (TC-4528: Cargo workspace license inheritance fix landed in both clients — Java PR#486, JS PR#532)
 
 ## Ecosystem Support
 
@@ -124,6 +124,7 @@ Last updated: 2026-04-23 (PR#428 refactored to `uv export`; PR#421 Go MVS fix me
 | Workspace-with-root handling | Yes | Yes | MATCH |
 | `[workspace.dependencies]` reading | Yes | Yes | MATCH |
 | Workspace version inheritance | Yes | Yes | MATCH |
+| Workspace license inheritance | Yes (PR#486) | Yes (PR#532) | **MATCH** (TC-4528) |
 | Path dependency PURLs (`repository_url=local`) | Yes | Yes | MATCH |
 | `exhortignore` in Cargo.toml | Yes | Yes | MATCH |
 | `trustify-da-ignore` in Cargo.toml | Yes | Yes | **MATCH** |
