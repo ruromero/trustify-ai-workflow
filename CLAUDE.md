@@ -10,6 +10,14 @@
 | fabric8-analytics-vscode-extension | TypeScript VS Code extension | serena-fabric8-analytics-vscode-extension | ${TRUSTIFY_WS_DIR}/fabric8-analytics/fabric8-analytics-vscode-extension |
 | trustify-da-javascript-client | JavaScript/TypeScript client library | serena-trustify-da-javascript-client | ${TRUSTIFY_WS_DIR}/guacsec/trustify-da-javascript-client |
 | trustify-dependency-analytics | Java/Quarkus backend service | serena-trustify-dependency-analytics | ${TRUSTIFY_WS_DIR}/guacsec/trustify-dependency-analytics |
+| trustify | Rust backend | serena-trustify | ${TRUSTIFY_WS_DIR}/guacsec/trustify |
+| trustify-scale-testing | Goose load/performance tests | serena-trustify-scale-testing | ${TRUSTIFY_WS_DIR}/guacsec/trustify-scale-testing |
+| trustify-ui | React/TypeScript frontend | serena-trustify-ui | ${TRUSTIFY_WS_DIR}/guacsec/trustify-ui |
+| rhtpa-konflux-release.0.3.z | Konflux release repo (0.3.z stream) | — | ${TRUSTIFY_GL_DIR}/trustification/rhtpa-konflux-release.0.3.z |
+| rhtpa-konflux-release.0.4.z | Konflux release repo (0.4.z stream) | — | ${TRUSTIFY_GL_DIR}/trustification/rhtpa-konflux-release.0.4.z |
+| rhtpa-konflux-release.0.5.z | Konflux release repo (0.5.z stream) | — | ${TRUSTIFY_GL_DIR}/trustification/rhtpa-konflux-release.0.5.z |
+| rhtpa-konflux-release.0.6.z | Konflux release repo (0.6.z stream) | — | ${TRUSTIFY_GL_DIR}/trustification/rhtpa-konflux-release.0.6.z |
+| trusted-profile-analyzer-operator | Go/Helm operator | — | ${TRUSTIFY_WS_DIR}/trustification/trusted-profile-analyzer-operator |
 
 ## Jira Configuration
 
@@ -19,6 +27,13 @@
 - Git Pull Request custom field: customfield_10875
 - GitHub Issue custom field: customfield_10747
 - Default component: DA
+
+### Jira Field Defaults
+
+- Default priority: Normal
+- fixVersion scope: both
+- Prompt for priority: true
+- Prompt for fixVersion: true
 
 ## Code Intelligence
 
@@ -35,6 +50,49 @@ For example, to search for a symbol in the trustify-dependency-analytics reposit
 ### Limitations
 
 No known limitations.
+
+## Hierarchy Configuration
+
+- Default epic grouping strategy: by-repository
+
+## Bug Configuration
+
+- Bug issue type ID: 10016
+- Bug template: docs/bug-template.md
+- Bug-to-Task link type: Blocks
+
+## Security Configuration
+
+### Product Lifecycle
+
+- Product pages URL: https://access.redhat.com/support/policy/updates/rhta
+- Jira version prefix: RHTPA
+- Vulnerability issue type ID: 10172
+- Component label pattern: pscomponent:
+- VEX Justification custom field: customfield_10483
+- Upstream Affected Component custom field: customfield_10632
+- PS Component custom field: customfield_10669
+- Stream custom field: customfield_10832
+- ProdSec contact email:
+- ProdSec Jira account ID:
+- Embargo policy URL: https://prodsec.pages.redhat.com/prodsec-docs/incident-response/Embargo_Process/
+
+### Version Streams
+
+| Stream | Lifecycle | Konflux Release Repo | Local Path | Security Matrix Path | Operator Version |
+|---|---|---|---|---|---|
+| 2.1.x | EOL | gitlab.cee.redhat.com/trustification/rhtpa-konflux-release.0.3.z | ${TRUSTIFY_GL_DIR}/trustification/rhtpa-konflux-release.0.3.z | docs/security-matrix-2.1.x.md | — |
+| 2.2.x | Full Support | gitlab.cee.redhat.com/trustification/rhtpa-konflux-release.0.4.z | ${TRUSTIFY_GL_DIR}/trustification/rhtpa-konflux-release.0.4.z | docs/security-matrix-2.2.x.md | 1.1.z |
+| 3.0.x | Full Support | gitlab.cee.redhat.com/trustification/rhtpa-konflux-release.0.5.z | ${TRUSTIFY_GL_DIR}/trustification/rhtpa-konflux-release.0.5.z | docs/security-matrix-3.0.x.md | 3.y.z |
+| 3.1.x | Full Support | gitlab.cee.redhat.com/trustification/rhtpa-konflux-release.0.6.z | ${TRUSTIFY_GL_DIR}/trustification/rhtpa-konflux-release.0.6.z | docs/security-matrix-3.1.x.md | 3.y.z |
+
+### Source Repositories
+
+| Repository | URL | Deployment Context |
+|---|---|---|
+| trustify | https://github.com/guacsec/trustify | customer-shipped |
+| trustify-ui | https://github.com/guacsec/trustify-ui | customer-shipped |
+| trusted-profile-analyzer-operator | https://github.com/trustification/trusted-profile-analyzer-operator | customer-shipped |
 
 ## Cross-Project Conventions
 
