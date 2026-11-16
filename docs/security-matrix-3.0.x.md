@@ -1,4 +1,4 @@
-<!-- Last-Updated: 2026-08-25T00:00:00Z -->
+<!-- Last-Updated: 2026-11-16T15:08:14Z -->
 # Security Matrix — 3.0.x Stream
 
 ## Version Stream
@@ -7,9 +7,15 @@ This Konflux release repo covers the **3.0.x** product version stream.
 
 ## Supportability Matrix
 
-| RHTPA Version | Build | Build Date | trustify | trustify-ui | Notes |
-|---|---|---|---|---|---|
-| 3.0.0 | 0.5.0 | 2026-07-16 | `eeca12e2f012fec2c29aa380d1bf04376f637e7f` | `b0b5c5f85428ebc862d3f6979d2dd21a7751517c` | tag v3.0.0-0.5.0 |
+| RHTPA Version | Build | Build Date | trustify | trustify-ui | operator | Notes |
+|---|---|---|---|---|---|---|
+| 3.0.0 | 0.5.0 | 2026-07-16 | `eeca12e2f012fec2c29aa380d1bf04376f637e7f` | `b0b5c5f85428ebc862d3f6979d2dd21a7751517c` | `3.0.0-1784728066` | tag v3.0.0-0.5.0; operator go1.26.5 / `x/net` v0.57.0 — below the CVE-2026-78660 threshold |
+
+The `operator` column records the `3.0.z` series GA operator build (`latest`)
+in effect for that product version. The operator image is versioned and released
+independently of the product, so its full build history, digests and SBOM
+evidence live in `docs/security-matrix-operator.md`. The fixed `3.0.1` build
+exists only as a pre-release candidate and is tracked in TC-7586.
 
 ### Source Pinning Method
 
